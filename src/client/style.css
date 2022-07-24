@@ -38,3 +38,30 @@ h1 {
 p {
     font-size: 1.5rem;
 }
+
+button {
+    border: 1.5px solid var(--primary);
+    border-radius: 1rem;
+    color: var(--primary);
+    background-color: transparent;
+    cursor: pointer;
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 0.3s;
+    font-size: 2rem;
+    padding: 0.5rem 2.5rem;
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+button:hover, button:active {
+    filter: brightness(1.5);
+}
+
+button.secondary {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}

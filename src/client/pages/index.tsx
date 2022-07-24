@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import ButtonLink from '../components/button-link';
 import PageWrapper from '../components/page-wrapper';
 
 const Home: NextPage = () => {
@@ -20,6 +21,10 @@ const Home: NextPage = () => {
                 that the app is still in its alpha version, so many features are still a work in
                 progress and can change at any time!
             </p>
+            <div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '5rem' }}>
+                <ButtonLink href="/problem">Solve a Problem</ButtonLink>
+                <ButtonLink className="secondary" href="/create">Create a Problem</ButtonLink>
+            </div>
         </PageWrapper>
     );
 };
