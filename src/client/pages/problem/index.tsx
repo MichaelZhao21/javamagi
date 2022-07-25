@@ -25,7 +25,7 @@ const ProblemHome = () => {
     return (
         <PageWrapper>
             <input placeholder="XXXXXX" value={code} onChange={handleChange} />
-            <button onClick={submit}>Go to Problem</button>
+            <button onClick={submit} style={{ width: '30rem', marginLeft: 'auto', marginRight: 'auto' }}>Go to Problem</button>
         </PageWrapper>
     );
 };
