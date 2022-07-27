@@ -65,3 +65,17 @@ button.secondary {
     border-color: var(--secondary);
     color: var(--secondary);
 }
+
+input {
+    background: none;
+    color: var(--text);
+    border: none;
+    border-bottom: 1.5px solid var(--text);
+    margin-bottom: 2rem;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+input:focus {
+    outline: none;
+    border-bottom-color: var(--secondary);
+}

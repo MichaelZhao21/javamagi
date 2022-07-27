@@ -1,7 +1,7 @@
 import React from 'react';
 import SideShapes from './side-shapes';
 
-const PageWrapper = (props) => {
+const PageWrapper = (props: React.AllHTMLAttributes<HTMLDivElement>) => {
     return (
         <div style={{ display: 'flex', flexDirection: 'row', minHeight: '100%' }}>
             <SideShapes left />
@@ -12,6 +12,7 @@ const PageWrapper = (props) => {
                     flexGrow: 1,
                     width: '60%',
                     minHeight: '100%',
+                    ...props.style
                 }}
             >
                 {props.children}

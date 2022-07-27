@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import PageWrapper from '../../components/page-wrapper';
 
 const ProblemHome = () => {
     const [code, setCode] = useState('');
+    const router = useRouter();
 
     // Submit a problem code
     const submit = () => {
@@ -15,6 +17,9 @@ const ProblemHome = () => {
         if (code.trim().length !== 6) {
             alert('Your code is the wrong length! (6 digits)');
         }
+
+        // If code is correct, take user to code page
+        router.push(`/problem/${code.trim()}`);
     };
 
     // Handle change to value
@@ -23,9 +28,29 @@ const ProblemHome = () => {
     };
 
     return (
-        <PageWrapper>
-            <input placeholder="XXXXXX" value={code} onChange={handleChange} />
-            <button onClick={submit} style={{ width: '30rem', marginLeft: 'auto', marginRight: 'auto' }}>Go to Problem</button>
+        <PageWrapper style={{ justifyContent: 'center' }}>
+            <input
+                type="text"
+                placeholder="XXXXXX"
+                maxLength={6}
+                value={code}
+                onChange={handleChange}
+                style={{
+                    textAlign: 'center',
+                    fontSize: '10rem',
+                    width: '30rem',
+                    margin: '0 auto',
+                }}
+            />
+            <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                Enter your 6-digit problem code above
+            </p>
+            <button
+                onClick={submit}
+                style={{ width: '30rem', marginLeft: 'auto', marginRight: 'auto' }}
+            >
+                Go to Problem
+            </button>
         </PageWrapper>
     );
 };
