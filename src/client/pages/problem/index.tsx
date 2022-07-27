@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import PageWrapper from '../../components/page-wrapper';
 
-const ProblemHome = () => {
+const ProblemHome: NextPage = () => {
     const [code, setCode] = useState('');
     const router = useRouter();
 
