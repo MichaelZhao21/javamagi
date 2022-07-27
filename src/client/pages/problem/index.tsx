@@ -29,7 +29,7 @@ const ProblemHome: NextPage = () => {
     };
 
     return (
-        <PageWrapper style={{ justifyContent: 'center' }}>
+        <PageWrapper header="Solve a Problem" prev="/" style={{ justifyContent: 'center' }}>
             <input
                 type="text"
                 placeholder="XXXXXX"

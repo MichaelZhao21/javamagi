@@ -37,7 +37,7 @@ const ProblemDisplay: NextPage = (
     props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
     return (
-        <PageWrapper>
+        <PageWrapper header="Canned Beans" prev="/problem">
             <ReactMarkdown
                 children={props.content}
                 remarkPlugins={[remarkGfm]}

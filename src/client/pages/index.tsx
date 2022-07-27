@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                     JavaMagi
                 </h1>
             </div>
-            <p style={{ textAlign: 'center' }}>
+            <p style={{ textAlign: 'center', fontSize: '1.5rem' }}>
                 This is a simple app to upload, edit, submit, and automatically judge code
                 submissions! Select one of the options below in the menu to proceed. Please note
                 that the app is still in its alpha version, so many features are still a work in

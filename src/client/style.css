@@ -65,7 +65,12 @@ button a {
     font-size: 2rem;
 }
 
-button:hover, button:active {
+.icon-button {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 0.3s;
+}
+
+button:hover, button:active, .icon-button:hover {
     filter: brightness(1.5);
 }
 
