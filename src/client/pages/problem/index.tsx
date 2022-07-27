@@ -42,7 +42,7 @@ const ProblemHome = () => {
                     margin: '0 auto',
                 }}
             />
-            <p style={{ textAlign: 'center', marginBottom: '2rem' }}>
+            <p style={{ textAlign: 'center', marginBottom: '2rem', marginTop: '1rem' }}>
                 Enter your 6-digit problem code above
             </p>
             <button

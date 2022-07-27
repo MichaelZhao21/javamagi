@@ -16,10 +16,17 @@ html, body, #__next {
 
 h1, h2, h3 {
     font-family: 'Crete Round', serif;
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+}
+
+h1.title {
     background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 7rem;
 }
 
 div, p, button, input {
@@ -31,12 +38,13 @@ code, pre {
     font-family: 'Ubuntu Mono', monospace;
 }
 
-h1 {
-    font-size: 7rem;
+pre {
+    margin: 0 0 1rem;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin-top: 0;
 }
 
 button {
