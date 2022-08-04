@@ -33,16 +33,28 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return { props: { error: false, content } };
 };
 
+/**
+ * Display page for a single problem, given by the ID in the URL
+ */
 const ProblemDisplay: NextPage = (
     props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
     return (
-        <PageWrapper header="Canned Beans" prev="/problem">
+        <PageWrapper header="Canned Beans" prev="/problem" style={{ paddingBottom: '3rem' }}>
             <ReactMarkdown
                 children={props.content}
                 remarkPlugins={[remarkGfm]}
                 components={markdownComponents}
             />
+
+            <h1 className="title">Code Submission</h1>
+            <button>Upload File(s)</button>
+            <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '3rem' }}>
+                <button>Test Code</button>
+                <button className="secondary">Submit Code</button>
+            </div>
+
+            <h1 className="title">Test Results</h1>
         </PageWrapper>
     );
 };

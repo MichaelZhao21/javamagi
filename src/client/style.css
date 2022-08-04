@@ -17,8 +17,12 @@ html, body, #__next {
 h1, h2, h3 {
     font-family: 'Crete Round', serif;
     color: var(--primary);
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 2rem 0 1rem;
+}
+
+h1 {
+    font-size: 3rem;
 }
 
 h1.title {
@@ -26,7 +30,8 @@ h1.title {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 7rem;
+    font-size: 4rem;
+    max-width: fit-content;
 }
 
 div, p, button, input {
